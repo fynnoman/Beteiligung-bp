@@ -1,0 +1,66 @@
+<!-- ============================================================ -->
+<!-- MODUL 09: FOOTER (Logo + Copyright + Impressum/Datenschutz)   -->
+<!-- ============================================================ -->
+<footer class="bp-footer" aria-label="b+p Footer">
+  <div class="bp-footer__inner">
+    <img class="bp-footer__logo"
+         src="https://personalberatung.b--p.de/hubfs/bp-logo.jpg"
+         alt="b+p Beratung Personal"
+         loading="lazy" />
+
+    <div class="bp-footer__meta">
+      <span id="bp-footer-year">© 2025 b+p Beratung Personal</span>
+      <a href="#">Impressum</a>
+      <a href="#">Datenschutz</a>
+    </div>
+  </div>
+</footer>
+
+<style>
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;500;600;700;800&display=swap");
+.bp-footer {
+  --brand-blue: #0064B5;
+  --brand-yellow: #FBB900;
+  --ink-primary: #3D4658;
+  --ink-muted: #8A93A3;
+  --line: #E4E7EC;
+  background: #fff;
+  border-top: 1px solid var(--line);
+  font-family: 'Nunito Sans', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+}
+.bp-footer__inner {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 40px clamp(24px, 4vw, 56px);
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+@media (min-width: 768px) {
+  .bp-footer__inner { flex-direction: row; align-items: center; }
+}
+.bp-footer__logo { height: 40px; width: auto; display: block; }
+.bp-footer__meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 24px;
+  color: var(--ink-muted);
+  font-size: 13.5px;
+}
+.bp-footer__meta a {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+.bp-footer__meta a:hover { color: var(--brand-blue); }
+</style>
+
+<script>
+(function(){
+  var el = document.getElementById('bp-footer-year');
+  if (el) { el.textContent = '© ' + new Date().getFullYear() + ' b+p Beratung Personal'; }
+})();
+</script>

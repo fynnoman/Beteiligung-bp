@@ -1,0 +1,128 @@
+<!-- ============================================================ -->
+<!-- MODUL 03: PROBLEMBEWUSSTSEIN (Ausgangslage · 3 Cards)         -->
+<!-- ============================================================ -->
+<section class="bp-problem" aria-label="Ausgangslage im Portfolio">
+  <div class="bp-problem__inner">
+    <div class="bp-problem__head">
+      <h2 class="bp-problem__headline">
+        Jede Beteiligung ist individuell.
+        <span class="bp-problem__accent">Führungsfragen kehren dennoch wieder.</span>
+      </h2>
+      <div class="bp-problem__intro">
+        <p>Nachfolge, Wachstum, Professionalisierung, Buy-and-Build oder Internationalisierung stellen Portfoliounternehmen immer wieder vor neue Personalentscheidungen.</p>
+        <p>Gleichzeitig unterscheiden sich Geschäftsmodell, Kultur und Führungssituation jeder Beteiligung.</p>
+      </div>
+    </div>
+
+    <div class="bp-problem__cards">
+      <article class="bp-problem__card">
+        <div class="bp-problem__card-top">
+          <span class="bp-problem__card-number">01</span>
+          <span class="bp-problem__card-rule" aria-hidden="true"></span>
+        </div>
+        <h3 class="bp-problem__card-title">Nachfolge und Schlüsselpositionen</h3>
+        <p class="bp-problem__card-body">Eine Position in Geschäftsführung, Finance oder einer anderen unternehmenskritischen Funktion ist neu zu besetzen. Intern oder extern.</p>
+      </article>
+
+      <article class="bp-problem__card">
+        <div class="bp-problem__card-top">
+          <span class="bp-problem__card-number">02</span>
+          <span class="bp-problem__card-rule" aria-hidden="true"></span>
+        </div>
+        <h3 class="bp-problem__card-title">Wachstum und Professionalisierung</h3>
+        <p class="bp-problem__card-body">Mit Wachstum und Professionalisierung verändern sich Strukturen, Verantwortlichkeiten und Anforderungen an das Führungsteam.</p>
+      </article>
+
+      <article class="bp-problem__card">
+        <div class="bp-problem__card-top">
+          <span class="bp-problem__card-number">03</span>
+          <span class="bp-problem__card-rule" aria-hidden="true"></span>
+        </div>
+        <h3 class="bp-problem__card-title">Portfolioübergreifender Bedarf</h3>
+        <p class="bp-problem__card-body">Führungsfragen entstehen über verschiedene Beteiligungen hinweg. Ein zentraler Ansprechpartner schafft Kontinuität und kennt relevante Strukturen, Anforderungen und Entscheidungswege.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<style>
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;500;600;700;800&display=swap");
+.bp-problem {
+  --brand-blue: #0064B5;
+  --ink-primary: #3D4658;
+  --ink-secondary: #626A78;
+  --line: #E4E7EC;
+  --ease-out: cubic-bezier(0.23,1,0.32,1);
+  background: #F7F8FA;
+  padding-block: clamp(72px, 8vw, 120px);
+  font-family: 'Nunito Sans', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+  color: var(--ink-secondary);
+}
+.bp-problem__inner { max-width: 1440px; margin: 0 auto; padding: 0 clamp(24px, 4vw, 56px); }
+.bp-problem__head { max-width: 48rem; margin-bottom: 56px; }
+.bp-problem__headline {
+  color: var(--ink-primary);
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 1.1;
+  letter-spacing: -0.012em;
+  margin: 0;
+}
+@media (min-width: 768px) { .bp-problem__headline { font-size: 42px; } }
+.bp-problem__accent { color: var(--brand-blue); }
+.bp-problem__intro { margin-top: 28px; font-size: 16.5px; line-height: 1.75; }
+.bp-problem__intro p { margin: 0; }
+.bp-problem__intro p + p { margin-top: 20px; }
+
+.bp-problem__cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+@media (min-width: 768px) {
+  .bp-problem__cards { grid-template-columns: repeat(3, minmax(0,1fr)); gap: 24px; }
+}
+.bp-problem__card {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  padding: 32px;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  transition: transform 220ms var(--ease-out), box-shadow 220ms var(--ease-out), border-color 220ms var(--ease-out);
+}
+.bp-problem__card:hover {
+  transform: translateY(-2px);
+  border-color: rgba(0,100,181,0.28);
+  box-shadow: 0 20px 40px -20px rgba(0,100,181,0.16);
+}
+.bp-problem__card-top { display: flex; align-items: center; gap: 12px; margin-bottom: 24px; }
+.bp-problem__card-number { color: var(--brand-blue); font-weight: 700; font-size: 13px; letter-spacing: 0.18em; }
+.bp-problem__card-rule { flex: 1; height: 1px; background: var(--line); }
+.bp-problem__card-title { color: var(--ink-primary); font-size: 19px; line-height: 1.35; font-weight: 700; margin: 0 0 16px; }
+@media (min-width: 768px) { .bp-problem__card-title { font-size: 20px; } }
+.bp-problem__card-body { font-size: 15.5px; line-height: 1.7; color: var(--ink-secondary); margin: 0; }
+
+/* Reveal */
+.bp-problem__head, .bp-problem__cards {
+  opacity: 0; transform: translateY(14px);
+  transition: opacity 900ms var(--ease-out), transform 900ms var(--ease-out);
+}
+.bp-problem.is-in .bp-problem__head { opacity: 1; transform: none; transition-delay: 40ms; }
+.bp-problem.is-in .bp-problem__cards { opacity: 1; transform: none; transition-delay: 160ms; }
+</style>
+
+<script>
+(function(){
+  var section = document.querySelector('.bp-problem');
+  if (!section) return;
+  if (!('IntersectionObserver' in window)) { section.classList.add('is-in'); return; }
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if (e.isIntersecting) { section.classList.add('is-in'); io.disconnect(); }
+    });
+  }, { threshold: 0.12, rootMargin: '0px 0px -60px 0px' });
+  io.observe(section);
+})();
+</script>

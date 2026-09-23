@@ -1,0 +1,120 @@
+<!-- ============================================================ -->
+<!-- MODUL 06: WARUM b+p (3 Icon-Cards)                            -->
+<!-- ============================================================ -->
+<section class="bp-why" aria-label="Warum b+p für Beteiligungsunternehmen">
+  <div class="bp-why__inner">
+    <div class="bp-why__head">
+      <h2 class="bp-why__headline">
+        Warum Beteiligungsunternehmen
+        <span class="bp-why__accent">mit b+p arbeiten.</span>
+      </h2>
+    </div>
+
+    <div class="bp-why__cards">
+      <article class="bp-why__card">
+        <div class="bp-why__icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
+        </div>
+        <h3 class="bp-why__card-title">Mittelständische Strukturen verstehen</h3>
+        <p class="bp-why__card-body">Mittelständische Unternehmen unterscheiden sich in Entscheidungswegen, Verantwortungsbreite und Unternehmenskultur wesentlich von Konzernstrukturen. Diese Besonderheiten fließen unmittelbar in Suche und Auswahl ein.</p>
+      </article>
+
+      <article class="bp-why__card">
+        <div class="bp-why__icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
+        </div>
+        <h3 class="bp-why__card-title">Personalentscheidungen methodisch fundieren</h3>
+        <p class="bp-why__card-body">Executive Search wird mit strukturierten Interviews, definierten Kompetenzprofilen und, wo sinnvoll, eignungsdiagnostischen Verfahren verbunden.</p>
+      </article>
+
+      <article class="bp-why__card">
+        <div class="bp-why__icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
+        </div>
+        <h3 class="bp-why__card-title">Kontinuität über mehrere Beteiligungen hinweg</h3>
+        <p class="bp-why__card-body">Unterschiedliche Unternehmen und unterschiedliche Rollen. Mit einem Ansprechpartner, der Strukturen, Anforderungen und Entscheidungslogiken bereits kennt.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<style>
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;500;600;700;800&display=swap");
+.bp-why {
+  --brand-blue: #0064B5;
+  --ink-primary: #3D4658;
+  --ink-secondary: #626A78;
+  --line: #E4E7EC;
+  --ease-out: cubic-bezier(0.23,1,0.32,1);
+  background: #F7F8FA;
+  padding-block: clamp(72px, 8vw, 120px);
+  font-family: 'Nunito Sans', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+  color: var(--ink-secondary);
+}
+.bp-why__inner { max-width: 1440px; margin: 0 auto; padding: 0 clamp(24px, 4vw, 56px); }
+.bp-why__head { max-width: 48rem; margin-bottom: 56px; }
+.bp-why__headline {
+  color: var(--ink-primary);
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 1.08;
+  letter-spacing: -0.012em;
+  margin: 0;
+}
+@media (min-width: 768px) { .bp-why__headline { font-size: 44px; } }
+.bp-why__accent { color: var(--brand-blue); }
+
+.bp-why__cards { display: grid; grid-template-columns: 1fr; gap: 20px; }
+@media (min-width: 768px) { .bp-why__cards { grid-template-columns: repeat(3, minmax(0,1fr)); gap: 24px; } }
+
+.bp-why__card {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  padding: 32px;
+  margin: 0;
+  transition: transform 220ms var(--ease-out), box-shadow 220ms var(--ease-out), border-color 220ms var(--ease-out);
+}
+.bp-why__card:hover {
+  transform: translateY(-2px);
+  border-color: rgba(0,100,181,0.28);
+  box-shadow: 0 20px 40px -20px rgba(0,100,181,0.16);
+}
+.bp-why__icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 999px;
+  background: rgba(0,100,181,0.1);
+  color: var(--brand-blue);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 24px;
+}
+.bp-why__icon svg { width: 18px; height: 18px; }
+.bp-why__card-title { color: var(--ink-primary); font-size: 19px; line-height: 1.35; font-weight: 700; margin: 0 0 16px; }
+@media (min-width: 768px) { .bp-why__card-title { font-size: 20px; } }
+.bp-why__card-body { font-size: 15.5px; line-height: 1.75; color: var(--ink-secondary); margin: 0; }
+
+/* Reveal */
+.bp-why__head, .bp-why__cards {
+  opacity: 0; transform: translateY(14px);
+  transition: opacity 900ms var(--ease-out), transform 900ms var(--ease-out);
+}
+.bp-why.is-in .bp-why__head { opacity: 1; transform: none; transition-delay: 40ms; }
+.bp-why.is-in .bp-why__cards { opacity: 1; transform: none; transition-delay: 160ms; }
+</style>
+
+<script>
+(function(){
+  var section = document.querySelector('.bp-why');
+  if (!section) return;
+  if (!('IntersectionObserver' in window)) { section.classList.add('is-in'); return; }
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if (e.isIntersecting) { section.classList.add('is-in'); io.disconnect(); }
+    });
+  }, { threshold: 0.12, rootMargin: '0px 0px -60px 0px' });
+  io.observe(section);
+})();
+</script>

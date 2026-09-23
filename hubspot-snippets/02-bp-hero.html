@@ -1,0 +1,247 @@
+<!-- ============================================================ -->
+<!-- MODUL 02: HERO                                                -->
+<!-- Eyebrow + H1 + Sub + CTA + Trust-Zeile + Editorial-Panel      -->
+<!-- ============================================================ -->
+<section class="bp-hero" aria-label="Executive Search für Beteiligungsunternehmen">
+  <div class="bp-hero__inner">
+    <div class="bp-hero__text">
+      <div class="bp-hero__eyebrow">Executive Search &amp; Leadership Advisory für Beteiligungsunternehmen</div>
+
+      <h1 class="bp-hero__headline">
+        Führungsentscheidungen im Portfolio
+        <span class="bp-hero__accent">fundiert treffen.</span>
+      </h1>
+
+      <p class="bp-hero__sub">
+        b+p unterstützt Family Offices, Beteiligungsgesellschaften und
+        Private-Equity-Investoren bei der Besetzung und Beurteilung von
+        Führungskräften in ihren Portfoliounternehmen. Von Geschäftsführung
+        und CFO bis zu zentralen operativen Schlüsselpositionen.
+      </p>
+
+      <div class="bp-hero__cta-wrap">
+        <a class="bp-hero__cta" href="#kontakt">
+          <span>Führungsbedarf vertraulich besprechen</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M5 12h14M13 5l7 7-7 7"/>
+          </svg>
+        </a>
+      </div>
+
+      <p class="bp-hero__micro">
+        Eine erste Einordnung Ihrer konkreten Situation. Vertraulich und unverbindlich.
+      </p>
+
+      <div class="bp-hero__trust">
+        <ul>
+          <li class="is-accent">Executive Search</li>
+          <li class="bp-hero__trust-dot" aria-hidden="true"></li>
+          <li>Leadership Assessment</li>
+          <li class="bp-hero__trust-dot" aria-hidden="true"></li>
+          <li>Nationale und internationale Suche</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="bp-hero__aside">
+      <div class="bp-hero__panel">
+        <div class="bp-hero__panel-top">
+          <span>Beteiligungsportfolio</span>
+          <span class="bp-hero__panel-note">Referenzumfeld</span>
+        </div>
+        <div class="bp-hero__panel-body">
+          <div class="bp-hero__panel-list-label">Typische Konstellationen</div>
+          <ul class="bp-hero__panel-list">
+            <li><span class="bp-hero__panel-rule" aria-hidden="true"></span><span>Industrie &amp; produzierender Mittelstand</span></li>
+            <li><span class="bp-hero__panel-rule" aria-hidden="true"></span><span>Technologie- und Wachstumsunternehmen</span></li>
+            <li><span class="bp-hero__panel-rule" aria-hidden="true"></span><span>Handel und Dienstleistung</span></li>
+            <li><span class="bp-hero__panel-rule" aria-hidden="true"></span><span>Buy-and-Build-Plattformen</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;500;600;700;800&display=swap");
+.bp-hero {
+  --brand-blue: #0064B5;
+  --brand-yellow: #FBB900;
+  --ink-primary: #3D4658;
+  --ink-secondary: #626A78;
+  --ink-muted: #8A93A3;
+  --line: #E4E7EC;
+  --ease-out: cubic-bezier(0.23,1,0.32,1);
+  background: #ffffff;
+  font-family: 'Nunito Sans', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+  color: var(--ink-secondary);
+}
+.bp-hero__inner {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 64px clamp(24px, 4vw, 56px);
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 48px;
+  align-items: start;
+}
+@media (min-width: 1024px) {
+  .bp-hero__inner {
+    grid-template-columns: 7fr 5fr;
+    gap: 64px;
+    padding-top: 96px;
+    padding-bottom: 96px;
+  }
+}
+.bp-hero__eyebrow {
+  display: inline-block;
+  font-size: 12.5px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--brand-blue);
+  margin-bottom: 32px;
+}
+.bp-hero__headline {
+  color: var(--ink-primary);
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.06;
+  letter-spacing: -0.018em;
+  margin: 0;
+}
+@media (min-width: 768px) { .bp-hero__headline { font-size: 52px; } }
+@media (min-width: 1024px) { .bp-hero__headline { font-size: 60px; } }
+.bp-hero__accent { color: var(--brand-blue); }
+.bp-hero__sub {
+  margin: 32px 0 0;
+  max-width: 42em;
+  font-size: 17px;
+  line-height: 1.75;
+}
+@media (min-width: 768px) { .bp-hero__sub { font-size: 18px; } }
+.bp-hero__cta-wrap { margin-top: 40px; }
+.bp-hero__cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 16px 30px;
+  background: var(--brand-yellow);
+  color: #1a1f2b;
+  font-weight: 700;
+  font-size: 15px;
+  letter-spacing: 0.01em;
+  border-radius: 999px;
+  text-decoration: none;
+  transition: background 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 6px 18px -8px rgba(251,185,0,0.55);
+}
+.bp-hero__cta:hover { background: #e2a800; transform: translateY(-1px); box-shadow: 0 10px 22px -8px rgba(251,185,0,0.7); }
+.bp-hero__cta svg { width: 18px; height: 18px; flex-shrink: 0; }
+.bp-hero__micro { margin-top: 16px; font-size: 13.5px; color: var(--ink-muted); }
+.bp-hero__trust {
+  margin-top: 48px;
+  padding-top: 24px;
+  border-top: 1px solid var(--line);
+  max-width: 42em;
+}
+.bp-hero__trust ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 24px;
+  font-size: 12.5px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--ink-muted);
+}
+.bp-hero__trust li.is-accent { color: var(--brand-blue); }
+.bp-hero__trust-dot { width: 4px; height: 4px; border-radius: 999px; background: var(--line); padding: 0 !important; }
+
+.bp-hero__aside { min-width: 0; }
+.bp-hero__panel {
+  position: relative;
+  aspect-ratio: 4 / 5;
+  border-radius: 18px;
+  overflow: hidden;
+  color: #fff;
+  background: linear-gradient(155deg, #001F3E 0%, #003A6B 55%, #004E8C 100%);
+  box-shadow: 0 1px 2px rgba(15,23,42,0.04), 0 8px 24px -12px rgba(15,23,42,0.08);
+  padding: 36px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+@media (min-width: 768px) { .bp-hero__panel { padding: 40px; } }
+.bp-hero__panel-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.6);
+}
+.bp-hero__panel-note { color: rgba(255,255,255,0.45); font-weight: 600; }
+.bp-hero__panel-list-label {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.55);
+  margin-bottom: 24px;
+}
+.bp-hero__panel-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.bp-hero__panel-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  color: rgba(255,255,255,0.9);
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 1.4;
+}
+.bp-hero__panel-rule {
+  display: inline-block;
+  margin-top: 10px;
+  width: 16px;
+  height: 1px;
+  background: rgba(255,255,255,0.5);
+  flex-shrink: 0;
+}
+
+/* Reveal */
+.bp-hero__text, .bp-hero__aside {
+  opacity: 0; transform: translateY(14px);
+  transition: opacity 900ms var(--ease-out), transform 900ms var(--ease-out);
+}
+.bp-hero.is-in .bp-hero__text { opacity: 1; transform: none; transition-delay: 40ms; }
+.bp-hero.is-in .bp-hero__aside { opacity: 1; transform: none; transition-delay: 180ms; }
+</style>
+
+<script>
+(function(){
+  var section = document.querySelector('.bp-hero');
+  if (!section) return;
+  if (!('IntersectionObserver' in window)) { section.classList.add('is-in'); return; }
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if (e.isIntersecting) { section.classList.add('is-in'); io.disconnect(); }
+    });
+  }, { threshold: 0.12, rootMargin: '0px 0px -60px 0px' });
+  io.observe(section);
+})();
+</script>

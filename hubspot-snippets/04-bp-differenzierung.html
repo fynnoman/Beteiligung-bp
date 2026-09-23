@@ -1,0 +1,116 @@
+<!-- ============================================================ -->
+<!-- MODUL 04: DIFFERENZIERUNG (Dunkelblauer Statement-Block)      -->
+<!-- ============================================================ -->
+<section class="bp-diff" aria-label="Standpunkt zur Führung in Beteiligungsunternehmen">
+  <div class="bp-diff__glow" aria-hidden="true"></div>
+  <div class="bp-diff__inner">
+    <h2 class="bp-diff__headline">
+      Eine neue Eigentümerstruktur macht aus einem mittelständischen Unternehmen
+      <span class="bp-diff__accent">keinen Konzern.</span>
+    </h2>
+
+    <div class="bp-diff__body">
+      <p>Auch nach dem Einstieg eines Family Offices, einer Beteiligungsgesellschaft oder eines Private-Equity-Investors bleiben Entscheidungswege, Unternehmenskultur und operative Verantwortung häufig mittelständisch geprägt.</p>
+      <p>Gleichzeitig steigen die Anforderungen an Wachstum, Transparenz, Reporting und Governance. Führungskräfte müssen daher sowohl dem operativen Geschäft als auch den Anforderungen von Gesellschaftern und Investoren gerecht werden.</p>
+      <p><strong>b+p beurteilt Führungspersönlichkeiten vor diesem Hintergrund: anhand ihrer Erfahrung, ihrer persönlichen Eignung und ihrer Fähigkeit, den spezifischen Anforderungen der jeweiligen Unternehmens- und Eigentümersituation gerecht zu werden.</strong></p>
+    </div>
+
+    <div class="bp-diff__cta-wrap">
+      <a class="bp-diff__cta" href="#kontakt">
+        <span>Führungsbedarf vertraulich besprechen</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M5 12h14M13 5l7 7-7 7"/>
+        </svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<style>
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;500;600;700;800&display=swap");
+.bp-diff {
+  --brand-yellow: #FBB900;
+  --accent-onblue: #5FA9DE;
+  --ease-out: cubic-bezier(0.23,1,0.32,1);
+  position: relative;
+  overflow: hidden;
+  background: #001F3E;
+  color: #fff;
+  font-family: 'Nunito Sans', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+}
+.bp-diff__glow {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: radial-gradient(ellipse at top right, rgba(0,100,181,0.28), transparent 60%);
+}
+.bp-diff__inner {
+  position: relative;
+  max-width: 64rem;
+  margin: 0 auto;
+  padding: 96px clamp(24px, 4vw, 56px);
+}
+@media (min-width: 768px) { .bp-diff__inner { padding-top: 128px; padding-bottom: 128px; } }
+.bp-diff__headline {
+  color: #fff;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 1.06;
+  letter-spacing: -0.02em;
+  margin: 0;
+}
+@media (min-width: 768px) { .bp-diff__headline { font-size: 48px; } }
+@media (min-width: 1024px) { .bp-diff__headline { font-size: 56px; } }
+.bp-diff__accent { color: var(--accent-onblue); }
+.bp-diff__body {
+  margin-top: 40px;
+  max-width: 52rem;
+  color: rgba(255,255,255,0.8);
+  font-size: 17px;
+  line-height: 1.75;
+}
+@media (min-width: 768px) { .bp-diff__body { font-size: 18px; } }
+.bp-diff__body p { margin: 0; }
+.bp-diff__body p + p { margin-top: 24px; }
+.bp-diff__body strong { color: #fff; font-weight: 600; }
+.bp-diff__cta-wrap { margin-top: 48px; }
+.bp-diff__cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 16px 30px;
+  background: var(--brand-yellow);
+  color: #1a1f2b;
+  font-weight: 700;
+  font-size: 15px;
+  border-radius: 999px;
+  text-decoration: none;
+  transition: background 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 6px 18px -8px rgba(251,185,0,0.55);
+}
+.bp-diff__cta:hover { background: #e2a800; transform: translateY(-1px); box-shadow: 0 10px 22px -8px rgba(251,185,0,0.7); }
+.bp-diff__cta svg { width: 18px; height: 18px; flex-shrink: 0; }
+
+/* Reveal */
+.bp-diff__headline, .bp-diff__body, .bp-diff__cta-wrap {
+  opacity: 0; transform: translateY(14px);
+  transition: opacity 900ms var(--ease-out), transform 900ms var(--ease-out);
+}
+.bp-diff.is-in .bp-diff__headline { opacity: 1; transform: none; transition-delay: 40ms; }
+.bp-diff.is-in .bp-diff__body { opacity: 1; transform: none; transition-delay: 180ms; }
+.bp-diff.is-in .bp-diff__cta-wrap { opacity: 1; transform: none; transition-delay: 320ms; }
+</style>
+
+<script>
+(function(){
+  var section = document.querySelector('.bp-diff');
+  if (!section) return;
+  if (!('IntersectionObserver' in window)) { section.classList.add('is-in'); return; }
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if (e.isIntersecting) { section.classList.add('is-in'); io.disconnect(); }
+    });
+  }, { threshold: 0.12, rootMargin: '0px 0px -60px 0px' });
+  io.observe(section);
+})();
+</script>

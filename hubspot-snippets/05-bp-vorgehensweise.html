@@ -1,0 +1,141 @@
+<!-- ============================================================ -->
+<!-- MODUL 05: VORGEHENSWEISE (3 nummerierte Schritte + Rollen)    -->
+<!-- ============================================================ -->
+<section class="bp-vw" aria-label="Vorgehensweise bei Executive Search">
+  <div class="bp-vw__inner">
+    <div class="bp-vw__head">
+      <h2 class="bp-vw__headline">
+        Suche und Auswahl
+        <span class="bp-vw__accent">aus einer Hand.</span>
+      </h2>
+      <p class="bp-vw__intro">
+        Je nach Ausgangslage verbinden wir Executive Search, strukturierte
+        Auswahlverfahren und Leadership Assessments zu einem klaren
+        Entscheidungsprozess.
+      </p>
+    </div>
+
+    <div class="bp-vw__steps">
+      <div class="bp-vw__step">
+        <div class="bp-vw__step-top">
+          <span class="bp-vw__step-number">01</span>
+          <span class="bp-vw__step-rule" aria-hidden="true"></span>
+        </div>
+        <h3 class="bp-vw__step-title">Rolle und Situation verstehen</h3>
+        <p class="bp-vw__step-body">Ausgangspunkt ist nicht allein die Vakanz, sondern die Entwicklungsphase des Unternehmens, die Eigentümerstruktur sowie die konkreten Anforderungen an Rolle und Führungspersönlichkeit.</p>
+      </div>
+
+      <div class="bp-vw__step">
+        <div class="bp-vw__step-top">
+          <span class="bp-vw__step-number">02</span>
+          <span class="bp-vw__step-rule" aria-hidden="true"></span>
+        </div>
+        <h3 class="bp-vw__step-title">Interne und externe Optionen fundiert bewerten</h3>
+        <p class="bp-vw__step-body">Executive Search kann mit strukturierten Interviews und Leadership Assessments verbunden werden. Dadurch lassen sich interne und externe Kandidaten auf einer einheitlichen Grundlage beurteilen.</p>
+      </div>
+
+      <div class="bp-vw__step">
+        <div class="bp-vw__step-top">
+          <span class="bp-vw__step-number">03</span>
+          <span class="bp-vw__step-rule" aria-hidden="true"></span>
+        </div>
+        <h3 class="bp-vw__step-title">Führungspersönlichkeiten identifizieren und gewinnen</h3>
+        <p class="bp-vw__step-body">b+p identifiziert und adressiert geeignete Kandidatinnen und Kandidaten und begleitet den Auswahlprozess bis zur fundierten Besetzungsentscheidung.</p>
+      </div>
+    </div>
+
+    <div class="bp-vw__roles">
+      <div class="bp-vw__roles-label">Typische Rollen</div>
+      <div class="bp-vw__roles-list">
+        <span class="bp-vw__role">Geschäftsführung</span>
+        <span class="bp-vw__role-dot" aria-hidden="true"></span>
+        <span class="bp-vw__role">CFO</span>
+        <span class="bp-vw__role-dot" aria-hidden="true"></span>
+        <span class="bp-vw__role">COO</span>
+        <span class="bp-vw__role-dot" aria-hidden="true"></span>
+        <span class="bp-vw__role">Finance</span>
+        <span class="bp-vw__role-dot" aria-hidden="true"></span>
+        <span class="bp-vw__role">Operations</span>
+        <span class="bp-vw__role-dot" aria-hidden="true"></span>
+        <span class="bp-vw__role">Vertrieb</span>
+        <span class="bp-vw__role-dot" aria-hidden="true"></span>
+        <span class="bp-vw__role">HR</span>
+        <span class="bp-vw__role-dot" aria-hidden="true"></span>
+        <span class="bp-vw__role">IT</span>
+        <span class="bp-vw__role-dot" aria-hidden="true"></span>
+        <span class="bp-vw__role">Technik</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;500;600;700;800&display=swap");
+.bp-vw {
+  --brand-blue: #0064B5;
+  --ink-primary: #3D4658;
+  --ink-secondary: #626A78;
+  --ink-muted: #8A93A3;
+  --line: #E4E7EC;
+  --ease-out: cubic-bezier(0.23,1,0.32,1);
+  background: #fff;
+  padding-block: clamp(72px, 8vw, 120px);
+  font-family: 'Nunito Sans', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+  color: var(--ink-secondary);
+}
+.bp-vw__inner { max-width: 1440px; margin: 0 auto; padding: 0 clamp(24px, 4vw, 56px); }
+.bp-vw__head { max-width: 48rem; margin-bottom: 64px; }
+.bp-vw__headline {
+  color: var(--ink-primary);
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 1.08;
+  letter-spacing: -0.012em;
+  margin: 0;
+}
+@media (min-width: 768px) { .bp-vw__headline { font-size: 44px; } }
+.bp-vw__accent { color: var(--brand-blue); }
+.bp-vw__intro { margin: 24px 0 0; font-size: 16.5px; line-height: 1.75; }
+
+.bp-vw__steps { display: grid; grid-template-columns: 1fr; gap: 48px; }
+@media (min-width: 768px) { .bp-vw__steps { grid-template-columns: repeat(3, minmax(0,1fr)); gap: 32px; } }
+
+.bp-vw__step-top { display: flex; align-items: baseline; gap: 16px; margin-bottom: 24px; }
+.bp-vw__step-number { color: var(--brand-blue); font-weight: 700; font-size: 26px; letter-spacing: -0.02em; line-height: 1; }
+.bp-vw__step-rule { flex: 1; height: 1px; background: var(--line); }
+.bp-vw__step-title { color: var(--ink-primary); font-size: 20px; line-height: 1.35; font-weight: 700; margin: 0 0 16px; }
+@media (min-width: 768px) { .bp-vw__step-title { font-size: 22px; } }
+.bp-vw__step-body { font-size: 15.5px; line-height: 1.75; margin: 0; }
+
+.bp-vw__roles {
+  margin-top: 64px;
+  padding-top: 32px;
+  border-top: 1px solid var(--line);
+}
+.bp-vw__roles-label { font-size: 12.5px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: var(--ink-muted); margin-bottom: 12px; }
+.bp-vw__roles-list { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 24px; color: var(--ink-primary); font-weight: 600; font-size: 15.5px; }
+.bp-vw__role-dot { width: 4px; height: 4px; border-radius: 999px; background: var(--line); display: inline-block; }
+
+/* Reveal */
+.bp-vw__head, .bp-vw__steps, .bp-vw__roles {
+  opacity: 0; transform: translateY(14px);
+  transition: opacity 900ms var(--ease-out), transform 900ms var(--ease-out);
+}
+.bp-vw.is-in .bp-vw__head { opacity: 1; transform: none; transition-delay: 40ms; }
+.bp-vw.is-in .bp-vw__steps { opacity: 1; transform: none; transition-delay: 160ms; }
+.bp-vw.is-in .bp-vw__roles { opacity: 1; transform: none; transition-delay: 300ms; }
+</style>
+
+<script>
+(function(){
+  var section = document.querySelector('.bp-vw');
+  if (!section) return;
+  if (!('IntersectionObserver' in window)) { section.classList.add('is-in'); return; }
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if (e.isIntersecting) { section.classList.add('is-in'); io.disconnect(); }
+    });
+  }, { threshold: 0.12, rootMargin: '0px 0px -60px 0px' });
+  io.observe(section);
+})();
+</script>

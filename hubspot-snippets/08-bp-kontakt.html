@@ -1,0 +1,211 @@
+<!-- ============================================================ -->
+<!-- MODUL 08: KONTAKT (Dunkelblauer Panel + HubSpot Form Embed)   -->
+<!-- Portal 8184088 · Form 494000c6-f3ed-41dc-b818-86984d601001    -->
+<!-- ============================================================ -->
+<section class="bp-kontakt" id="kontakt" aria-label="Erstgespräch anfragen">
+  <div class="bp-kontakt__inner">
+    <div class="bp-kontakt__panel">
+      <div class="bp-kontakt__glow" aria-hidden="true"></div>
+
+      <div class="bp-kontakt__grid">
+        <div class="bp-kontakt__col-left">
+          <div class="bp-kontakt__eyebrow">Erstgespräch</div>
+
+          <h2 class="bp-kontakt__headline">
+            Erstgespräch
+            <span class="bp-kontakt__accent">anfragen.</span>
+          </h2>
+
+          <p class="bp-kontakt__sub">
+            Schildern Sie uns kurz Ihre aktuelle Situation. Ein Partner von b+p
+            ordnet den Bedarf gemeinsam mit Ihnen ein und bespricht mögliche
+            Vorgehensweisen.
+          </p>
+
+          <ul class="bp-kontakt__bullets">
+            <li>
+              <span class="bp-kontakt__rule" aria-hidden="true"></span>
+              <span>
+                <span class="bp-kontakt__b-title">Persönliche Rückmeldung durch einen Partner</span>
+                <span class="bp-kontakt__b-sub">Direkter Austausch mit einem erfahrenen Ansprechpartner.</span>
+              </span>
+            </li>
+            <li>
+              <span class="bp-kontakt__rule" aria-hidden="true"></span>
+              <span>
+                <span class="bp-kontakt__b-title">Unverbindliche Ersteinschätzung</span>
+                <span class="bp-kontakt__b-sub">Gemeinsame Einordnung der Situation ohne Verpflichtung zur Beauftragung.</span>
+              </span>
+            </li>
+            <li>
+              <span class="bp-kontakt__rule" aria-hidden="true"></span>
+              <span>
+                <span class="bp-kontakt__b-title">Konkretes Vorgehen</span>
+                <span class="bp-kontakt__b-sub">Empfehlung eines geeigneten Vorgehens aus Executive Search, Leadership Assessment oder einer Kombination beider Ansätze.</span>
+              </span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bp-kontakt__col-right">
+          <div class="bp-kontakt__form-card">
+            <div class="bp-kontakt__form-title">Anfrage</div>
+            <div id="bp-hubspot-form" class="bp-hubspot-form"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;500;600;700;800&display=swap");
+.bp-kontakt {
+  --brand-blue: #0064B5;
+  --brand-yellow: #FBB900;
+  --ink-primary: #3D4658;
+  --ink-secondary: #626A78;
+  --line: #E4E7EC;
+  --accent-onblue: #5FA9DE;
+  --ease-out: cubic-bezier(0.23,1,0.32,1);
+  background: #F7F8FA;
+  padding-block: clamp(72px, 8vw, 120px);
+  font-family: 'Nunito Sans', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+  scroll-margin-top: 96px;
+}
+.bp-kontakt__inner { max-width: 1440px; margin: 0 auto; padding: 0 clamp(24px, 4vw, 56px); }
+
+.bp-kontakt__panel {
+  position: relative;
+  overflow: hidden;
+  background: #001F3E;
+  color: #fff;
+  border-radius: 18px;
+  box-shadow: 0 1px 2px rgba(15,23,42,0.04), 0 8px 24px -12px rgba(15,23,42,0.08);
+}
+.bp-kontakt__glow {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: radial-gradient(ellipse at top right, rgba(0,100,181,0.28), transparent 60%);
+}
+.bp-kontakt__grid {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 40px;
+  padding: 32px;
+}
+@media (min-width: 768px) { .bp-kontakt__grid { padding: 48px; } }
+@media (min-width: 1024px) { .bp-kontakt__grid { grid-template-columns: 5fr 7fr; gap: 64px; padding: 64px; } }
+
+.bp-kontakt__eyebrow {
+  display: inline-block;
+  font-size: 12.5px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.72);
+  margin-bottom: 24px;
+}
+.bp-kontakt__headline { color: #fff; font-weight: 700; font-size: 28px; line-height: 1.08; letter-spacing: -0.015em; margin: 0; }
+@media (min-width: 768px) { .bp-kontakt__headline { font-size: 38px; } }
+.bp-kontakt__accent { color: var(--accent-onblue); }
+.bp-kontakt__sub { margin: 24px 0 0; color: rgba(255,255,255,0.8); font-size: 16.5px; line-height: 1.75; max-width: 28rem; }
+
+.bp-kontakt__bullets { margin: 40px 0 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 20px; }
+.bp-kontakt__bullets li { display: flex; align-items: flex-start; gap: 16px; color: rgba(255,255,255,0.85); font-size: 15px; }
+.bp-kontakt__rule { display: inline-block; margin-top: 10px; width: 16px; height: 1px; background: rgba(255,255,255,0.6); flex-shrink: 0; }
+.bp-kontakt__b-title { display: block; color: #fff; font-weight: 600; }
+.bp-kontakt__b-sub { display: block; color: rgba(255,255,255,0.6); font-size: 14px; margin-top: 2px; }
+
+.bp-kontakt__form-card { background: #fff; color: var(--ink-primary); border-radius: 18px; padding: 24px; }
+@media (min-width: 768px) { .bp-kontakt__form-card { padding: 32px; } }
+@media (min-width: 1024px) { .bp-kontakt__form-card { padding: 40px; } }
+.bp-kontakt__form-title { color: var(--ink-primary); font-weight: 700; font-size: 17px; margin-bottom: 24px; }
+
+/* HubSpot form overrides */
+.bp-hubspot-form .hs-form-field { margin-bottom: 18px; }
+.bp-hubspot-form .hs-form-field > label { display: block; font-size: 12.5px; font-weight: 700; color: var(--ink-primary); margin-bottom: 8px; letter-spacing: 0.02em; }
+.bp-hubspot-form .hs-form-required { color: var(--brand-blue); margin-left: 2px; }
+.bp-hubspot-form .hs-input:not([type="checkbox"]):not([type="radio"]) {
+  width: 100%;
+  border: 1px solid var(--line);
+  background: #fff;
+  border-radius: 10px;
+  padding: 14px 16px;
+  font-size: 15px;
+  color: var(--ink-primary);
+  font-family: inherit;
+  box-sizing: border-box;
+  transition: border-color .2s ease, box-shadow .2s ease;
+}
+.bp-hubspot-form .hs-input:focus { outline: none; border-color: var(--brand-blue); box-shadow: 0 0 0 4px rgba(0,100,181,0.12); }
+.bp-hubspot-form textarea.hs-input { resize: vertical; min-height: 120px; }
+.bp-hubspot-form .hs-error-msgs { list-style: none; padding: 0; margin: 6px 0 0; color: #c53030; font-size: 13px; }
+.bp-hubspot-form .hs-form-booleancheckbox label { display: inline-flex; align-items: flex-start; gap: 10px; font-size: 13.5px; color: var(--ink-secondary); font-weight: 500; line-height: 1.55; cursor: pointer; }
+.bp-hubspot-form .hs-form-booleancheckbox input { margin-top: 3px; accent-color: var(--brand-blue); }
+.bp-hubspot-form .legal-consent-container { margin: 18px 0; font-size: 13px; color: rgba(0,0,0,0.55); line-height: 1.6; }
+.bp-hubspot-form .hs-submit { margin-top: 8px; }
+.bp-hubspot-form .hs-button, .bp-hubspot-form input[type="submit"] {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 16px 30px;
+  background: var(--brand-yellow);
+  color: #1a1f2b;
+  font-weight: 700;
+  font-size: 15px;
+  border-radius: 999px;
+  border: 0;
+  cursor: pointer;
+  font-family: inherit;
+  transition: background .2s ease, transform .2s ease, box-shadow .2s ease;
+  box-shadow: 0 6px 18px -8px rgba(251,185,0,0.55);
+}
+.bp-hubspot-form .hs-button:hover, .bp-hubspot-form input[type="submit"]:hover { background: #e2a800; transform: translateY(-1px); }
+.bp-hubspot-form .submitted-message { color: var(--ink-primary); font-size: 15px; line-height: 1.6; padding: 20px; background: rgba(0,100,181,0.06); border-radius: 12px; }
+.bp-hubspot-form .form-columns-2 { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 20px; }
+.bp-hubspot-form .form-columns-2 .hs-form-field { width: auto !important; float: none !important; padding: 0 !important; }
+.bp-hubspot-form .form-columns-1 .hs-form-field { width: 100% !important; float: none !important; padding: 0 !important; }
+@media (max-width: 640px) { .bp-hubspot-form .form-columns-2 { grid-template-columns: 1fr; } }
+
+/* Reveal */
+.bp-kontakt__panel { opacity: 0; transform: translateY(14px); transition: opacity 900ms var(--ease-out), transform 900ms var(--ease-out); }
+.bp-kontakt.is-in .bp-kontakt__panel { opacity: 1; transform: none; transition-delay: 60ms; }
+</style>
+
+<script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/embed/v2.js"></script>
+<script>
+(function(){
+  var section = document.querySelector('.bp-kontakt');
+  if (section && 'IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if (e.isIntersecting) { section.classList.add('is-in'); io.disconnect(); }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -60px 0px' });
+    io.observe(section);
+  } else if (section) {
+    section.classList.add('is-in');
+  }
+
+  function createForm(){
+    if (!window.hbspt || !document.getElementById('bp-hubspot-form')) return;
+    if (document.querySelector('#bp-hubspot-form form')) return;
+    hbspt.forms.create({
+      portalId: "8184088",
+      formId: "494000c6-f3ed-41dc-b818-86984d601001",
+      region: "na1",
+      target: "#bp-hubspot-form"
+    });
+  }
+  if (window.hbspt) { createForm(); }
+  else {
+    var check = setInterval(function(){
+      if (window.hbspt) { clearInterval(check); createForm(); }
+    }, 150);
+    setTimeout(function(){ clearInterval(check); }, 8000);
+  }
+})();
+</script>

@@ -1,0 +1,99 @@
+<!-- ============================================================ -->
+<!-- MODUL 07: TRUST / KPI (3 Kacheln)                             -->
+<!-- ============================================================ -->
+<section class="bp-trust" aria-label="Erfahrung in Beteiligungs- und Portfoliostrukturen">
+  <div class="bp-trust__inner">
+    <div class="bp-trust__head">
+      <h2 class="bp-trust__headline">
+        Erfahrung in
+        <span class="bp-trust__accent">Beteiligungs- und Portfoliostrukturen.</span>
+      </h2>
+    </div>
+
+    <div class="bp-trust__grid">
+      <div class="bp-trust__tile">
+        <div class="bp-trust__kpi">25+</div>
+        <div class="bp-trust__unit">Jahre</div>
+        <div class="bp-trust__label">Erfahrung in der Besetzung von Fach- und Führungspositionen</div>
+      </div>
+      <div class="bp-trust__tile">
+        <div class="bp-trust__kpi">&gt;90 %</div>
+        <div class="bp-trust__unit">Besetzungsquote</div>
+        <div class="bp-trust__label">bei Executive-Search-Mandaten</div>
+      </div>
+      <div class="bp-trust__tile">
+        <div class="bp-trust__kpi">National</div>
+        <div class="bp-trust__unit">&amp; international</div>
+        <div class="bp-trust__label">Suchmandate für mittelständische Unternehmen und Schlüsselpositionen</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;500;600;700;800&display=swap");
+.bp-trust {
+  --brand-blue: #0064B5;
+  --ink-primary: #3D4658;
+  --ink-secondary: #626A78;
+  --ink-muted: #8A93A3;
+  --line: #E4E7EC;
+  --ease-out: cubic-bezier(0.23,1,0.32,1);
+  background: #fff;
+  padding-block: clamp(72px, 8vw, 120px);
+  font-family: 'Nunito Sans', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+  color: var(--ink-secondary);
+}
+.bp-trust__inner { max-width: 1440px; margin: 0 auto; padding: 0 clamp(24px, 4vw, 56px); }
+.bp-trust__head { max-width: 48rem; margin-bottom: 56px; }
+.bp-trust__headline {
+  color: var(--ink-primary);
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 1.08;
+  letter-spacing: -0.012em;
+  margin: 0;
+}
+@media (min-width: 768px) { .bp-trust__headline { font-size: 44px; } }
+.bp-trust__accent { color: var(--brand-blue); }
+
+.bp-trust__grid {
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1px;
+  background: var(--line);
+}
+@media (min-width: 768px) { .bp-trust__grid { grid-template-columns: repeat(3, minmax(0,1fr)); } }
+
+.bp-trust__tile { background: #fff; padding: 32px; display: flex; flex-direction: column; }
+@media (min-width: 768px) { .bp-trust__tile { padding: 40px; } }
+.bp-trust__kpi { color: var(--brand-blue); font-weight: 700; font-size: 38px; line-height: 1.02; letter-spacing: -0.02em; }
+@media (min-width: 768px) { .bp-trust__kpi { font-size: 48px; } }
+.bp-trust__unit { margin-top: 4px; color: var(--ink-muted); font-size: 13px; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; }
+.bp-trust__label { margin-top: 24px; padding-top: 20px; border-top: 1px solid var(--line); color: var(--ink-secondary); font-size: 15px; line-height: 1.65; }
+
+/* Reveal */
+.bp-trust__head, .bp-trust__grid {
+  opacity: 0; transform: translateY(14px);
+  transition: opacity 900ms var(--ease-out), transform 900ms var(--ease-out);
+}
+.bp-trust.is-in .bp-trust__head { opacity: 1; transform: none; transition-delay: 40ms; }
+.bp-trust.is-in .bp-trust__grid { opacity: 1; transform: none; transition-delay: 160ms; }
+</style>
+
+<script>
+(function(){
+  var section = document.querySelector('.bp-trust');
+  if (!section) return;
+  if (!('IntersectionObserver' in window)) { section.classList.add('is-in'); return; }
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if (e.isIntersecting) { section.classList.add('is-in'); io.disconnect(); }
+    });
+  }, { threshold: 0.12, rootMargin: '0px 0px -60px 0px' });
+  io.observe(section);
+})();
+</script>
