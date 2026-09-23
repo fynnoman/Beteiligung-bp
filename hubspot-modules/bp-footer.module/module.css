@@ -1,0 +1,50 @@
+.bp-footer {
+  --bp-brand-blue: #0064B5;
+  --bp-brand-yellow: #FBB900;
+  --bp-ink-primary: #3D4658;
+  --bp-ink-muted: #8A93A3;
+  --bp-line: #E4E7EC;
+  --bp-container: 1440px;
+
+  background: #fff;
+  border-top: 1px solid var(--bp-line);
+  font-family: "Nunito Sans", "Avenir Next", system-ui, -apple-system, sans-serif;
+}
+
+.bp-footer__inner {
+  max-width: var(--bp-container);
+  margin: 0 auto;
+  padding: 40px clamp(24px, 4vw, 56px);
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+@media (min-width: 768px) {
+  .bp-footer__inner { flex-direction: row; align-items: center; }
+}
+
+.bp-footer__logo { height: 40px; width: auto; display: block; }
+.bp-footer__wordmark {
+  font-weight: 800;
+  font-size: 28px;
+  color: var(--bp-brand-blue);
+  letter-spacing: -0.02em;
+}
+.bp-footer__plus { color: var(--bp-brand-yellow); }
+
+.bp-footer__meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 24px;
+  color: var(--bp-ink-muted);
+  font-size: 13.5px;
+}
+.bp-footer__meta a {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+.bp-footer__meta a:hover { color: var(--bp-brand-blue); }

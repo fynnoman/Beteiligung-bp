@@ -1,0 +1,62 @@
+<section class="bp-kontakt" id="{{ module.anchor_id|default('kontakt') }}">
+  <div class="bp-kontakt__inner">
+    <div class="bp-kontakt__panel">
+      <div class="bp-kontakt__glow" aria-hidden="true"></div>
+
+      <div class="bp-kontakt__grid">
+        <div class="bp-kontakt__col-left">
+          {% if module.eyebrow %}
+            <div class="bp-kontakt__eyebrow">{{ module.eyebrow }}</div>
+          {% endif %}
+
+          <h2 class="bp-kontakt__headline">
+            {{ module.headline_start }}
+            {% if module.headline_accent %}
+              <span class="bp-kontakt__accent">{{ module.headline_accent }}</span>
+            {% endif %}
+          </h2>
+
+          {% if module.subtext %}
+            <div class="bp-kontakt__sub">{{ module.subtext }}</div>
+          {% endif %}
+
+          {% if module.bullets %}
+            <ul class="bp-kontakt__bullets">
+              {% for b in module.bullets %}
+                <li>
+                  <span class="bp-kontakt__rule" aria-hidden="true"></span>
+                  <span>
+                    {% if b.title %}<span class="bp-kontakt__b-title">{{ b.title }}</span>{% endif %}
+                    {% if b.subtitle %}<span class="bp-kontakt__b-sub">{{ b.subtitle }}</span>{% endif %}
+                  </span>
+                </li>
+              {% endfor %}
+            </ul>
+          {% endif %}
+        </div>
+
+        <div class="bp-kontakt__col-right">
+          <div class="bp-kontakt__form-card">
+            {% if module.form_title %}
+              <div class="bp-kontakt__form-title">{{ module.form_title }}</div>
+            {% endif %}
+
+            {% if module.form.form_id %}
+              {% form
+                form_key="bp_kontakt_form"
+                form_to_use="{{ module.form.form_id }}"
+                response_response_type="{{ module.form.response_type }}"
+                response_message="{{ module.form.message }}"
+                response_redirect_url="{{ module.form.redirect_url }}"
+                response_redirect_id="{{ module.form.redirect_id }}"
+                no_title=true
+              %}
+            {% else %}
+              <div class="bp-kontakt__form-empty">Bitte im Editor rechts unter „Kontaktformular" ein HubSpot-Formular auswählen.</div>
+            {% endif %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

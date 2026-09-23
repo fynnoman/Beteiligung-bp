@@ -1,0 +1,72 @@
+.bp-why {
+  --bp-brand-blue: #0064B5;
+  --bp-ink-primary: #3D4658;
+  --bp-ink-secondary: #626A78;
+  --bp-line: #E4E7EC;
+  --bp-container: 1440px;
+
+  background: #F7F8FA;
+  padding-block: clamp(72px, 8vw, 120px);
+  font-family: "Nunito Sans", "Avenir Next", system-ui, -apple-system, sans-serif;
+  color: var(--bp-ink-secondary);
+}
+
+.bp-why__inner {
+  max-width: var(--bp-container);
+  margin: 0 auto;
+  padding: 0 clamp(24px, 4vw, 56px);
+}
+
+.bp-why__head { max-width: 48rem; margin-bottom: 56px; }
+
+.bp-why__headline {
+  color: var(--bp-ink-primary);
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 1.08;
+  letter-spacing: -0.012em;
+  margin: 0;
+}
+@media (min-width: 768px) { .bp-why__headline { font-size: 44px; } }
+.bp-why__accent { color: var(--bp-brand-blue); }
+
+.bp-why__cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+@media (min-width: 768px) {
+  .bp-why__cards { grid-template-columns: repeat(3, minmax(0,1fr)); gap: 24px; }
+}
+
+.bp-why__card {
+  background: #fff;
+  border: 1px solid var(--bp-line);
+  border-radius: 18px;
+  padding: 32px;
+}
+
+.bp-why__icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 999px;
+  background: rgba(0,100,181,0.1);
+  color: var(--bp-brand-blue);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 24px;
+}
+.bp-why__icon svg { width: 18px; height: 18px; }
+
+.bp-why__card-title {
+  color: var(--bp-ink-primary);
+  font-size: 19px;
+  line-height: 1.35;
+  font-weight: 700;
+  margin: 0 0 16px;
+}
+@media (min-width: 768px) { .bp-why__card-title { font-size: 20px; } }
+
+.bp-why__card-body { font-size: 15.5px; line-height: 1.75; color: var(--bp-ink-secondary); }
+.bp-why__card-body p { margin: 0; }

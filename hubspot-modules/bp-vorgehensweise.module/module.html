@@ -1,0 +1,50 @@
+<section class="bp-vw">
+  <div class="bp-vw__inner">
+    <div class="bp-vw__head">
+      <h2 class="bp-vw__headline">
+        {{ module.headline_start }}
+        {% if module.headline_accent %}
+          <span class="bp-vw__accent">{{ module.headline_accent }}</span>
+        {% endif %}
+      </h2>
+      {% if module.intro %}
+        <div class="bp-vw__intro">{{ module.intro }}</div>
+      {% endif %}
+    </div>
+
+    {% if module.steps %}
+      <div class="bp-vw__steps">
+        {% for step in module.steps %}
+          <div class="bp-vw__step">
+            <div class="bp-vw__step-top">
+              <span class="bp-vw__step-number">{{ step.number }}</span>
+              <span class="bp-vw__step-rule" aria-hidden="true"></span>
+            </div>
+            {% if step.title %}
+              <h3 class="bp-vw__step-title">{{ step.title }}</h3>
+            {% endif %}
+            {% if step.body %}
+              <div class="bp-vw__step-body">{{ step.body }}</div>
+            {% endif %}
+          </div>
+        {% endfor %}
+      </div>
+    {% endif %}
+
+    {% if module.roles %}
+      <div class="bp-vw__roles">
+        {% if module.roles_label %}
+          <div class="bp-vw__roles-label">{{ module.roles_label }}</div>
+        {% endif %}
+        <div class="bp-vw__roles-list">
+          {% for role in module.roles %}
+            {% if role.text %}
+              <span class="bp-vw__role">{{ role.text }}</span>
+              {% if not loop.last %}<span class="bp-vw__role-dot" aria-hidden="true"></span>{% endif %}
+            {% endif %}
+          {% endfor %}
+        </div>
+      </div>
+    {% endif %}
+  </div>
+</section>

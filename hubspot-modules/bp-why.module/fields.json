@@ -1,0 +1,29 @@
+[
+  {
+    "name": "headline_start",
+    "label": "Headline · Anfang",
+    "type": "text",
+    "default": "Warum Beteiligungsunternehmen"
+  },
+  {
+    "name": "headline_accent",
+    "label": "Headline · Blauer Akzent",
+    "type": "text",
+    "default": "mit b+p arbeiten."
+  },
+  {
+    "name": "cards",
+    "label": "Cards",
+    "type": "group",
+    "occurrence": { "min": 1, "max": 6, "default": 3 },
+    "children": [
+      { "name": "title", "label": "Titel", "type": "text", "default": "" },
+      { "name": "body", "label": "Text", "type": "richtext", "default": "" }
+    ],
+    "default": [
+      { "title": "Mittelständische Strukturen verstehen", "body": "<p>Mittelständische Unternehmen unterscheiden sich in Entscheidungswegen, Verantwortungsbreite und Unternehmenskultur wesentlich von Konzernstrukturen. Diese Besonderheiten fließen unmittelbar in Suche und Auswahl ein.</p>" },
+      { "title": "Personalentscheidungen methodisch fundieren", "body": "<p>Executive Search wird mit strukturierten Interviews, definierten Kompetenzprofilen und, wo sinnvoll, eignungsdiagnostischen Verfahren verbunden.</p>" },
+      { "title": "Kontinuität über mehrere Beteiligungen hinweg", "body": "<p>Unterschiedliche Unternehmen und unterschiedliche Rollen. Mit einem Ansprechpartner, der Strukturen, Anforderungen und Entscheidungslogiken bereits kennt.</p>" }
+    ]
+  }
+]

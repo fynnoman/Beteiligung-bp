@@ -1,0 +1,94 @@
+.bp-vw {
+  --bp-brand-blue: #0064B5;
+  --bp-ink-primary: #3D4658;
+  --bp-ink-secondary: #626A78;
+  --bp-ink-muted: #8A93A3;
+  --bp-line: #E4E7EC;
+  --bp-container: 1440px;
+
+  background: #fff;
+  padding-block: clamp(72px, 8vw, 120px);
+  font-family: "Nunito Sans", "Avenir Next", system-ui, -apple-system, sans-serif;
+  color: var(--bp-ink-secondary);
+}
+
+.bp-vw__inner {
+  max-width: var(--bp-container);
+  margin: 0 auto;
+  padding: 0 clamp(24px, 4vw, 56px);
+}
+
+.bp-vw__head { max-width: 48rem; margin-bottom: 64px; }
+.bp-vw__headline {
+  color: var(--bp-ink-primary);
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 1.08;
+  letter-spacing: -0.012em;
+  margin: 0;
+}
+@media (min-width: 768px) { .bp-vw__headline { font-size: 44px; } }
+.bp-vw__accent { color: var(--bp-brand-blue); }
+
+.bp-vw__intro { margin-top: 24px; font-size: 16.5px; line-height: 1.75; }
+.bp-vw__intro p { margin: 0; }
+
+.bp-vw__steps {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 48px;
+}
+@media (min-width: 768px) {
+  .bp-vw__steps { grid-template-columns: repeat(3, minmax(0,1fr)); gap: 32px 32px; }
+}
+
+.bp-vw__step-top {
+  display: flex;
+  align-items: baseline;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+.bp-vw__step-number {
+  color: var(--bp-brand-blue);
+  font-weight: 700;
+  font-size: 26px;
+  letter-spacing: -0.02em;
+  line-height: 1;
+}
+.bp-vw__step-rule { flex: 1; height: 1px; background: var(--bp-line); }
+
+.bp-vw__step-title {
+  color: var(--bp-ink-primary);
+  font-size: 20px;
+  line-height: 1.35;
+  font-weight: 700;
+  margin: 0 0 16px;
+}
+@media (min-width: 768px) { .bp-vw__step-title { font-size: 22px; } }
+
+.bp-vw__step-body { font-size: 15.5px; line-height: 1.75; }
+.bp-vw__step-body p { margin: 0; }
+
+.bp-vw__roles {
+  margin-top: 64px;
+  padding-top: 32px;
+  border-top: 1px solid var(--bp-line);
+}
+.bp-vw__roles-label {
+  font-size: 12.5px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--bp-ink-muted);
+  margin-bottom: 12px;
+}
+.bp-vw__roles-list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px 24px;
+  color: var(--bp-ink-primary);
+  font-weight: 600;
+  font-size: 15.5px;
+}
+.bp-vw__role-dot { width: 4px; height: 4px; border-radius: 999px; background: var(--bp-line); }

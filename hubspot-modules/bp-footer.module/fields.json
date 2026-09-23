@@ -1,0 +1,26 @@
+[
+  {
+    "name": "logo",
+    "label": "Logo",
+    "type": "image",
+    "default": { "src": "", "alt": "b+p Beratung Personal", "width": 238, "height": 119 }
+  },
+  {
+    "name": "copyright",
+    "label": "Copyright-Zeile",
+    "type": "text",
+    "default": "b+p Beratung Personal"
+  },
+  {
+    "name": "impressum_url",
+    "label": "Impressum URL",
+    "type": "url",
+    "default": { "url": { "type": "EXTERNAL", "href": "#" } }
+  },
+  {
+    "name": "datenschutz_url",
+    "label": "Datenschutz URL",
+    "type": "url",
+    "default": { "url": { "type": "EXTERNAL", "href": "#" } }
+  }
+]

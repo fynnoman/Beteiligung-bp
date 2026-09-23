@@ -1,0 +1,111 @@
+[
+  {
+    "name": "eyebrow",
+    "label": "Eyebrow (Kleintext oben)",
+    "type": "text",
+    "default": "Executive Search & Leadership Advisory für Beteiligungsunternehmen"
+  },
+  {
+    "name": "headline_start",
+    "label": "Headline · Anfang",
+    "type": "text",
+    "default": "Führungsentscheidungen im Portfolio"
+  },
+  {
+    "name": "headline_accent",
+    "label": "Headline · Blauer Akzent",
+    "type": "text",
+    "default": "fundiert treffen."
+  },
+  {
+    "name": "subheadline",
+    "label": "Subheadline",
+    "type": "richtext",
+    "default": "<p>b+p unterstützt Family Offices, Beteiligungsgesellschaften und Private-Equity-Investoren bei der Besetzung und Beurteilung von Führungskräften in ihren Portfoliounternehmen. Von Geschäftsführung und CFO bis zu zentralen operativen Schlüsselpositionen.</p>"
+  },
+  {
+    "name": "cta_text",
+    "label": "CTA Button-Text",
+    "type": "text",
+    "default": "Führungsbedarf vertraulich besprechen"
+  },
+  {
+    "name": "cta_anchor",
+    "label": "CTA Ziel (Anchor/URL)",
+    "type": "text",
+    "default": "#kontakt"
+  },
+  {
+    "name": "microcopy",
+    "label": "Microcopy unter CTA",
+    "type": "text",
+    "default": "Eine erste Einordnung Ihrer konkreten Situation. Vertraulich und unverbindlich."
+  },
+  {
+    "name": "trust_items",
+    "label": "Trust-Zeile (Punkte)",
+    "type": "group",
+    "occurrence": { "min": 0, "max": 6, "default": 3 },
+    "children": [
+      {
+        "name": "text",
+        "label": "Text",
+        "type": "text",
+        "default": "Executive Search"
+      },
+      {
+        "name": "accent",
+        "label": "Blau hervorheben?",
+        "type": "boolean",
+        "default": false
+      }
+    ],
+    "default": [
+      { "text": "Executive Search", "accent": true },
+      { "text": "Leadership Assessment", "accent": false },
+      { "text": "Nationale und internationale Suche", "accent": false }
+    ]
+  },
+  {
+    "name": "side_image",
+    "label": "Bild rechts (optional)",
+    "help_text": "Wenn gesetzt, ersetzt das Bild das gestylte Editorial-Panel.",
+    "type": "image",
+    "responsive": true,
+    "resizable": true,
+    "default": { "src": "", "alt": "", "width": 800, "height": 1000 }
+  },
+  {
+    "name": "side_top_label",
+    "label": "Editorial-Panel · Label oben links",
+    "type": "text",
+    "default": "Beteiligungsportfolio"
+  },
+  {
+    "name": "side_top_note",
+    "label": "Editorial-Panel · Label oben rechts",
+    "type": "text",
+    "default": "Referenzumfeld"
+  },
+  {
+    "name": "side_list_label",
+    "label": "Editorial-Panel · Listen-Überschrift",
+    "type": "text",
+    "default": "Typische Konstellationen"
+  },
+  {
+    "name": "side_list_items",
+    "label": "Editorial-Panel · Listeneinträge",
+    "type": "group",
+    "occurrence": { "min": 0, "max": 8, "default": 4 },
+    "children": [
+      { "name": "text", "label": "Eintrag", "type": "text", "default": "" }
+    ],
+    "default": [
+      { "text": "Industrie & produzierender Mittelstand" },
+      { "text": "Technologie- und Wachstumsunternehmen" },
+      { "text": "Handel und Dienstleistung" },
+      { "text": "Buy-and-Build-Plattformen" }
+    ]
+  }
+]

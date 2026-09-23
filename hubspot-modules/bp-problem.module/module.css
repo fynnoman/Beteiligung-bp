@@ -1,0 +1,79 @@
+.bp-problem {
+  --bp-brand-blue: #0064B5;
+  --bp-ink-primary: #3D4658;
+  --bp-ink-secondary: #626A78;
+  --bp-line: #E4E7EC;
+  --bp-container: 1440px;
+
+  background: #F7F8FA;
+  padding-block: clamp(72px, 8vw, 120px);
+  font-family: "Nunito Sans", "Avenir Next", system-ui, -apple-system, sans-serif;
+  color: var(--bp-ink-secondary);
+}
+
+.bp-problem__inner {
+  max-width: var(--bp-container);
+  margin: 0 auto;
+  padding: 0 clamp(24px, 4vw, 56px);
+}
+
+.bp-problem__head { max-width: 48rem; margin-bottom: 56px; }
+
+.bp-problem__headline {
+  color: var(--bp-ink-primary);
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 1.1;
+  letter-spacing: -0.012em;
+  margin: 0;
+}
+@media (min-width: 768px) { .bp-problem__headline { font-size: 42px; } }
+.bp-problem__accent { color: var(--bp-brand-blue); }
+
+.bp-problem__intro { margin-top: 28px; font-size: 16.5px; line-height: 1.75; }
+.bp-problem__intro p { margin: 0; }
+.bp-problem__intro p + p { margin-top: 20px; }
+
+.bp-problem__cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+@media (min-width: 768px) {
+  .bp-problem__cards { grid-template-columns: repeat(3, minmax(0,1fr)); gap: 24px; }
+}
+
+.bp-problem__card {
+  background: #fff;
+  border: 1px solid var(--bp-line);
+  border-radius: 18px;
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+}
+
+.bp-problem__card-top {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+.bp-problem__card-number {
+  color: var(--bp-brand-blue);
+  font-weight: 700;
+  font-size: 13px;
+  letter-spacing: 0.18em;
+}
+.bp-problem__card-rule { flex: 1; height: 1px; background: var(--bp-line); }
+
+.bp-problem__card-title {
+  color: var(--bp-ink-primary);
+  font-size: 19px;
+  line-height: 1.35;
+  font-weight: 700;
+  margin: 0 0 16px;
+}
+@media (min-width: 768px) { .bp-problem__card-title { font-size: 20px; } }
+
+.bp-problem__card-body { font-size: 15.5px; line-height: 1.7; color: var(--bp-ink-secondary); }
+.bp-problem__card-body p { margin: 0; }

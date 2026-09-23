@@ -1,0 +1,32 @@
+[
+  {
+    "name": "headline_start",
+    "label": "Headline · Anfang",
+    "type": "text",
+    "default": "Eine neue Eigentümerstruktur macht aus einem mittelständischen Unternehmen"
+  },
+  {
+    "name": "headline_accent",
+    "label": "Headline · Blauer Akzent",
+    "type": "text",
+    "default": "keinen Konzern."
+  },
+  {
+    "name": "body",
+    "label": "Fließtext",
+    "type": "richtext",
+    "default": "<p>Auch nach dem Einstieg eines Family Offices, einer Beteiligungsgesellschaft oder eines Private-Equity-Investors bleiben Entscheidungswege, Unternehmenskultur und operative Verantwortung häufig mittelständisch geprägt.</p><p>Gleichzeitig steigen die Anforderungen an Wachstum, Transparenz, Reporting und Governance. Führungskräfte müssen daher sowohl dem operativen Geschäft als auch den Anforderungen von Gesellschaftern und Investoren gerecht werden.</p><p><strong>b+p beurteilt Führungspersönlichkeiten vor diesem Hintergrund: anhand ihrer Erfahrung, ihrer persönlichen Eignung und ihrer Fähigkeit, den spezifischen Anforderungen der jeweiligen Unternehmens- und Eigentümersituation gerecht zu werden.</strong></p>"
+  },
+  {
+    "name": "cta_text",
+    "label": "CTA Button-Text",
+    "type": "text",
+    "default": "Führungsbedarf vertraulich besprechen"
+  },
+  {
+    "name": "cta_anchor",
+    "label": "CTA Ziel (Anchor/URL)",
+    "type": "text",
+    "default": "#kontakt"
+  }
+]

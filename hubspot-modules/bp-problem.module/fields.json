@@ -1,0 +1,48 @@
+[
+  {
+    "name": "headline_start",
+    "label": "Headline · Anfang",
+    "type": "text",
+    "default": "Jede Beteiligung ist individuell."
+  },
+  {
+    "name": "headline_accent",
+    "label": "Headline · Blauer Akzent",
+    "type": "text",
+    "default": "Führungsfragen kehren dennoch wieder."
+  },
+  {
+    "name": "intro",
+    "label": "Intro-Text",
+    "type": "richtext",
+    "default": "<p>Nachfolge, Wachstum, Professionalisierung, Buy-and-Build oder Internationalisierung stellen Portfoliounternehmen immer wieder vor neue Personalentscheidungen.</p><p>Gleichzeitig unterscheiden sich Geschäftsmodell, Kultur und Führungssituation jeder Beteiligung.</p>"
+  },
+  {
+    "name": "cards",
+    "label": "Cards",
+    "type": "group",
+    "occurrence": { "min": 1, "max": 6, "default": 3 },
+    "children": [
+      { "name": "number", "label": "Nummer", "type": "text", "default": "01" },
+      { "name": "title", "label": "Titel", "type": "text", "default": "" },
+      { "name": "body", "label": "Text", "type": "richtext", "default": "" }
+    ],
+    "default": [
+      {
+        "number": "01",
+        "title": "Nachfolge und Schlüsselpositionen",
+        "body": "<p>Eine Position in Geschäftsführung, Finance oder einer anderen unternehmenskritischen Funktion ist neu zu besetzen. Intern oder extern.</p>"
+      },
+      {
+        "number": "02",
+        "title": "Wachstum und Professionalisierung",
+        "body": "<p>Mit Wachstum und Professionalisierung verändern sich Strukturen, Verantwortlichkeiten und Anforderungen an das Führungsteam.</p>"
+      },
+      {
+        "number": "03",
+        "title": "Portfolioübergreifender Bedarf",
+        "body": "<p>Führungsfragen entstehen über verschiedene Beteiligungen hinweg. Ein zentraler Ansprechpartner schafft Kontinuität und kennt relevante Strukturen, Anforderungen und Entscheidungswege.</p>"
+      }
+    ]
+  }
+]

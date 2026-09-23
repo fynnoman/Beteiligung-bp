@@ -1,0 +1,31 @@
+[
+  {
+    "name": "logo",
+    "label": "Logo",
+    "required": false,
+    "locked": false,
+    "type": "image",
+    "responsive": true,
+    "resizable": true,
+    "show_loading": false,
+    "default": {
+      "src": "",
+      "alt": "b+p Beratung Personal",
+      "width": 238,
+      "height": 119
+    }
+  },
+  {
+    "name": "phone_display",
+    "label": "Telefon Anzeige",
+    "type": "text",
+    "default": "0681 / 76199-0"
+  },
+  {
+    "name": "phone_tel",
+    "label": "Telefon Link (tel:)",
+    "help_text": "Ohne Leerzeichen. Beispiel: +4968176199-0",
+    "type": "text",
+    "default": "+4968176199-0"
+  }
+]

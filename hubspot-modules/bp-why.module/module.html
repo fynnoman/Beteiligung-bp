@@ -1,0 +1,32 @@
+<section class="bp-why">
+  <div class="bp-why__inner">
+    <div class="bp-why__head">
+      <h2 class="bp-why__headline">
+        {{ module.headline_start }}
+        {% if module.headline_accent %}
+          <span class="bp-why__accent">{{ module.headline_accent }}</span>
+        {% endif %}
+      </h2>
+    </div>
+
+    {% if module.cards %}
+      <div class="bp-why__cards">
+        {% for card in module.cards %}
+          <article class="bp-why__card">
+            <div class="bp-why__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M20 6L9 17l-5-5"/>
+              </svg>
+            </div>
+            {% if card.title %}
+              <h3 class="bp-why__card-title">{{ card.title }}</h3>
+            {% endif %}
+            {% if card.body %}
+              <div class="bp-why__card-body">{{ card.body }}</div>
+            {% endif %}
+          </article>
+        {% endfor %}
+      </div>
+    {% endif %}
+  </div>
+</section>

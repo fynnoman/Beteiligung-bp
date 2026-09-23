@@ -1,0 +1,26 @@
+<section class="bp-diff">
+  <div class="bp-diff__glow" aria-hidden="true"></div>
+  <div class="bp-diff__inner">
+    <h2 class="bp-diff__headline">
+      {{ module.headline_start }}
+      {% if module.headline_accent %}
+        <span class="bp-diff__accent">{{ module.headline_accent }}</span>
+      {% endif %}
+    </h2>
+
+    {% if module.body %}
+      <div class="bp-diff__body">{{ module.body }}</div>
+    {% endif %}
+
+    {% if module.cta_text %}
+      <div class="bp-diff__cta-wrap">
+        <a class="bp-btn-onblue" href="{{ module.cta_anchor|default('#kontakt') }}">
+          <span>{{ module.cta_text }}</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M5 12h14M13 5l7 7-7 7"/>
+          </svg>
+        </a>
+      </div>
+    {% endif %}
+  </div>
+</section>

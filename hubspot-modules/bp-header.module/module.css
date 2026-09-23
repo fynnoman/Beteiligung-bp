@@ -1,0 +1,61 @@
+.bp-header {
+  --bp-brand-blue: #0064B5;
+  --bp-brand-yellow: #FBB900;
+  --bp-ink-primary: #3D4658;
+  --bp-line: #E4E7EC;
+  --bp-container: 1440px;
+
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: rgba(255,255,255,0.95);
+  backdrop-filter: saturate(180%) blur(8px);
+  -webkit-backdrop-filter: saturate(180%) blur(8px);
+  border-bottom: 1px solid rgba(228,231,236,0.6);
+  font-family: "Nunito Sans", "Avenir Next", system-ui, -apple-system, sans-serif;
+}
+
+.bp-header__inner {
+  max-width: var(--bp-container);
+  margin: 0 auto;
+  padding: 20px clamp(24px, 4vw, 56px);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.bp-header__brand { display: flex; align-items: center; }
+.bp-header__logo {
+  height: 44px;
+  width: auto;
+  display: block;
+}
+@media (min-width: 768px) {
+  .bp-header__logo { height: 48px; }
+}
+
+.bp-header__wordmark {
+  font-weight: 800;
+  font-size: 32px;
+  color: var(--bp-brand-blue);
+  letter-spacing: -0.02em;
+  line-height: 1;
+}
+.bp-header__plus { color: var(--bp-brand-yellow); }
+
+.bp-header__phone {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--bp-ink-primary);
+  font-weight: 600;
+  font-size: 14px;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+.bp-header__phone:hover { color: var(--bp-brand-blue); }
+.bp-header__phone svg { width: 16px; height: 16px; color: var(--bp-brand-blue); }
+@media (min-width: 768px) {
+  .bp-header__phone { font-size: 15px; }
+}

@@ -1,0 +1,23 @@
+<footer class="bp-footer">
+  <div class="bp-footer__inner">
+    {% if module.logo.src %}
+      <img class="bp-footer__logo"
+           src="{{ module.logo.src }}"
+           alt="{{ module.logo.alt|escape }}"
+           width="{{ module.logo.width|default(238) }}"
+           height="{{ module.logo.height|default(119) }}" />
+    {% else %}
+      <span class="bp-footer__wordmark">b<span class="bp-footer__plus">+</span>p</span>
+    {% endif %}
+
+    <div class="bp-footer__meta">
+      <span>© {{ local_dt|datetimeformat('%Y') }} {{ module.copyright }}</span>
+      {% if module.impressum_url.url.href %}
+        <a href="{{ module.impressum_url.url.href }}">Impressum</a>
+      {% endif %}
+      {% if module.datenschutz_url.url.href %}
+        <a href="{{ module.datenschutz_url.url.href }}">Datenschutz</a>
+      {% endif %}
+    </div>
+  </div>
+</footer>

@@ -1,0 +1,65 @@
+[
+  {
+    "name": "anchor_id",
+    "label": "Anker-ID (für CTAs)",
+    "help_text": "Buttons anderer Module verlinken auf #kontakt.",
+    "type": "text",
+    "default": "kontakt"
+  },
+  {
+    "name": "eyebrow",
+    "label": "Eyebrow",
+    "type": "text",
+    "default": "Erstgespräch"
+  },
+  {
+    "name": "headline_start",
+    "label": "Headline · Anfang",
+    "type": "text",
+    "default": "Erstgespräch"
+  },
+  {
+    "name": "headline_accent",
+    "label": "Headline · Blauer Akzent",
+    "type": "text",
+    "default": "anfragen."
+  },
+  {
+    "name": "subtext",
+    "label": "Beschreibung",
+    "type": "richtext",
+    "default": "<p>Schildern Sie uns kurz Ihre aktuelle Situation. Ein Partner von b+p ordnet den Bedarf gemeinsam mit Ihnen ein und bespricht mögliche Vorgehensweisen.</p>"
+  },
+  {
+    "name": "bullets",
+    "label": "Bullets",
+    "type": "group",
+    "occurrence": { "min": 0, "max": 6, "default": 3 },
+    "children": [
+      { "name": "title", "label": "Titel", "type": "text", "default": "" },
+      { "name": "subtitle", "label": "Untertitel", "type": "text", "default": "" }
+    ],
+    "default": [
+      { "title": "Persönliche Rückmeldung durch einen Partner", "subtitle": "Direkter Austausch mit einem erfahrenen Ansprechpartner." },
+      { "title": "Unverbindliche Ersteinschätzung", "subtitle": "Gemeinsame Einordnung der Situation ohne Verpflichtung zur Beauftragung." },
+      { "title": "Konkretes Vorgehen", "subtitle": "Empfehlung eines geeigneten Vorgehens aus Executive Search, Leadership Assessment oder einer Kombination beider Ansätze." }
+    ]
+  },
+  {
+    "name": "form",
+    "label": "Kontaktformular",
+    "help_text": "HubSpot-Formular auswählen. Wird rechts im Panel gerendert.",
+    "required": true,
+    "type": "form",
+    "default": {
+      "response_type": "inline",
+      "message": "Vielen Dank. Wir melden uns kurzfristig persönlich zurück."
+    }
+  },
+  {
+    "name": "form_title",
+    "label": "Formular-Überschrift",
+    "type": "text",
+    "default": "Anfrage"
+  }
+]

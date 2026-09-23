@@ -1,0 +1,24 @@
+<section class="bp-trust">
+  <div class="bp-trust__inner">
+    <div class="bp-trust__head">
+      <h2 class="bp-trust__headline">
+        {{ module.headline_start }}
+        {% if module.headline_accent %}
+          <span class="bp-trust__accent">{{ module.headline_accent }}</span>
+        {% endif %}
+      </h2>
+    </div>
+
+    {% if module.stats %}
+      <div class="bp-trust__grid">
+        {% for stat in module.stats %}
+          <div class="bp-trust__tile">
+            {% if stat.kpi %}<div class="bp-trust__kpi">{{ stat.kpi }}</div>{% endif %}
+            {% if stat.unit %}<div class="bp-trust__unit">{{ stat.unit }}</div>{% endif %}
+            {% if stat.label %}<div class="bp-trust__label">{{ stat.label }}</div>{% endif %}
+          </div>
+        {% endfor %}
+      </div>
+    {% endif %}
+  </div>
+</section>

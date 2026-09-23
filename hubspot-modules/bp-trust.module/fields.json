@@ -1,0 +1,30 @@
+[
+  {
+    "name": "headline_start",
+    "label": "Headline · Anfang",
+    "type": "text",
+    "default": "Erfahrung in"
+  },
+  {
+    "name": "headline_accent",
+    "label": "Headline · Blauer Akzent",
+    "type": "text",
+    "default": "Beteiligungs- und Portfoliostrukturen."
+  },
+  {
+    "name": "stats",
+    "label": "KPI-Kacheln",
+    "type": "group",
+    "occurrence": { "min": 1, "max": 6, "default": 3 },
+    "children": [
+      { "name": "kpi", "label": "Kennzahl", "type": "text", "default": "" },
+      { "name": "unit", "label": "Einheit", "type": "text", "default": "" },
+      { "name": "label", "label": "Beschreibung", "type": "text", "default": "" }
+    ],
+    "default": [
+      { "kpi": "25+", "unit": "Jahre", "label": "Erfahrung in der Besetzung von Fach- und Führungspositionen" },
+      { "kpi": ">90 %", "unit": "Besetzungsquote", "label": "bei Executive-Search-Mandaten" },
+      { "kpi": "National", "unit": "& international", "label": "Suchmandate für mittelständische Unternehmen und Schlüsselpositionen" }
+    ]
+  }
+]

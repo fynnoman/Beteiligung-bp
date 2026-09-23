@@ -1,0 +1,79 @@
+<section class="bp-hero">
+  <div class="bp-hero__inner">
+    <div class="bp-hero__text">
+      {% if module.eyebrow %}
+        <div class="bp-hero__eyebrow">{{ module.eyebrow }}</div>
+      {% endif %}
+
+      <h1 class="bp-hero__headline">
+        {{ module.headline_start }}
+        {% if module.headline_accent %}
+          <span class="bp-hero__accent">{{ module.headline_accent }}</span>
+        {% endif %}
+      </h1>
+
+      {% if module.subheadline %}
+        <div class="bp-hero__sub">{{ module.subheadline }}</div>
+      {% endif %}
+
+      {% if module.cta_text %}
+        <div class="bp-hero__cta-wrap">
+          <a class="bp-btn-primary" href="{{ module.cta_anchor|default('#kontakt') }}">
+            <span>{{ module.cta_text }}</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M5 12h14M13 5l7 7-7 7"/>
+            </svg>
+          </a>
+        </div>
+      {% endif %}
+
+      {% if module.microcopy %}
+        <p class="bp-hero__micro">{{ module.microcopy }}</p>
+      {% endif %}
+
+      {% if module.trust_items %}
+        <div class="bp-hero__trust">
+          <ul>
+            {% for item in module.trust_items %}
+              <li{% if item.accent %} class="is-accent"{% endif %}>{{ item.text }}</li>
+              {% if not loop.last %}<li class="bp-hero__trust-dot" aria-hidden="true"></li>{% endif %}
+            {% endfor %}
+          </ul>
+        </div>
+      {% endif %}
+    </div>
+
+    <div class="bp-hero__aside">
+      {% if module.side_image.src %}
+        <img class="bp-hero__aside-image"
+             src="{{ module.side_image.src }}"
+             alt="{{ module.side_image.alt|escape }}"
+             loading="eager" />
+      {% else %}
+        <div class="bp-hero__panel">
+          <div class="bp-hero__panel-top">
+            {% if module.side_top_label %}<span>{{ module.side_top_label }}</span>{% endif %}
+            {% if module.side_top_note %}<span class="bp-hero__panel-note">{{ module.side_top_note }}</span>{% endif %}
+          </div>
+          <div class="bp-hero__panel-body">
+            {% if module.side_list_label %}
+              <div class="bp-hero__panel-list-label">{{ module.side_list_label }}</div>
+            {% endif %}
+            {% if module.side_list_items %}
+              <ul class="bp-hero__panel-list">
+                {% for item in module.side_list_items %}
+                  {% if item.text %}
+                    <li>
+                      <span class="bp-hero__panel-rule" aria-hidden="true"></span>
+                      <span>{{ item.text }}</span>
+                    </li>
+                  {% endif %}
+                {% endfor %}
+              </ul>
+            {% endif %}
+          </div>
+        </div>
+      {% endif %}
+    </div>
+  </div>
+</section>

@@ -45,80 +45,20 @@ export default function LPContact() {
             </div>
 
             <div className="lg:col-span-7">
-              <div className="bg-white rounded-panel p-6 md:p-8 lg:p-10 text-ink-primary">
-                <div className="mb-6 flex items-center justify-between gap-4 flex-wrap">
-                  <div className="text-ink-primary text-[17px] font-bold">
-                    Anfrage
-                  </div>
-                  <div className="text-[11px] font-bold uppercase tracking-eyebrow text-ink-muted">
-                    Platzhalter · wird durch HubSpot-Embed ersetzt
+              <div className="bg-white rounded-panel p-8 md:p-10 lg:p-12 text-ink-primary min-h-[420px] flex flex-col">
+                <div className="text-ink-primary text-[17px] font-bold mb-6">
+                  Anfrage
+                </div>
+                <div className="flex-1 rounded-card border border-dashed border-ink-line/70 flex items-center justify-center text-center p-8">
+                  <div>
+                    <div className="text-[11px] font-bold uppercase tracking-eyebrow text-ink-muted mb-3">
+                      HubSpot-Form-Slot
+                    </div>
+                    <div className="text-ink-secondary text-[15px] leading-[1.6] max-w-xs mx-auto">
+                      Im HubSpot-Kontakt-Modul wählt der Redakteur das gewünschte Formular aus. Es wird an dieser Stelle gerendert.
+                    </div>
                   </div>
                 </div>
-
-                <form
-                  action="#kontakt"
-                  method="post"
-                  className="grid grid-cols-1 md:grid-cols-2 gap-5"
-                >
-                  <div>
-                    <label className="form-label" htmlFor="firstname">Vorname</label>
-                    <input id="firstname" name="firstname" type="text" className="form-input" required />
-                  </div>
-                  <div>
-                    <label className="form-label" htmlFor="lastname">Nachname</label>
-                    <input id="lastname" name="lastname" type="text" className="form-input" required />
-                  </div>
-                  <div>
-                    <label className="form-label" htmlFor="email">E-Mail</label>
-                    <input id="email" name="email" type="email" className="form-input" required />
-                  </div>
-                  <div>
-                    <label className="form-label" htmlFor="phone">Telefon</label>
-                    <input id="phone" name="phone" type="tel" className="form-input" />
-                  </div>
-                  <div className="md:col-span-2">
-                    <label className="form-label" htmlFor="company">Unternehmen / Family Office</label>
-                    <input id="company" name="company" type="text" className="form-input" />
-                  </div>
-                  <div className="md:col-span-2">
-                    <label className="form-label" htmlFor="role">Rolle</label>
-                    <select id="role" name="role" className="form-input" defaultValue="">
-                      <option value="" disabled>Bitte auswählen</option>
-                      <option>Geschäftsführung / Vorstand</option>
-                      <option>Gesellschafter / Family Office</option>
-                      <option>Investor / Beteiligungsmanager</option>
-                      <option>Aufsichtsrat / Beirat</option>
-                      <option>HR / Personalverantwortung</option>
-                      <option>Sonstiges</option>
-                    </select>
-                  </div>
-                  <div className="md:col-span-2">
-                    <label className="form-label" htmlFor="situation">Kurze Beschreibung der Situation</label>
-                    <textarea
-                      id="situation"
-                      name="situation"
-                      rows={5}
-                      className="form-input resize-none"
-                      placeholder="Portfoliounternehmen, Rolle, Zeitrahmen. Freiwillige Angaben genügen für ein erstes Gespräch."
-                    />
-                  </div>
-
-                  <div className="md:col-span-2 flex items-start gap-3">
-                    <input id="privacy" name="privacy" type="checkbox" className="mt-1 accent-brand-blue-deep" required />
-                    <label htmlFor="privacy" className="text-[13.5px] leading-[1.55] text-ink-secondary">
-                      Einverständnis zur Kontaktaufnahme durch b+p.
-                    </label>
-                  </div>
-
-                  <div className="md:col-span-2 mt-2">
-                    <button type="submit" className="btn-primary w-full md:w-auto">
-                      Anfrage senden
-                      <svg className="arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
-                        <path d="M5 12h14M13 5l7 7-7 7" />
-                      </svg>
-                    </button>
-                  </div>
-                </form>
               </div>
             </div>
           </div>

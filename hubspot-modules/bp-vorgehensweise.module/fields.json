@@ -1,0 +1,62 @@
+[
+  {
+    "name": "headline_start",
+    "label": "Headline · Anfang",
+    "type": "text",
+    "default": "Suche und Auswahl"
+  },
+  {
+    "name": "headline_accent",
+    "label": "Headline · Blauer Akzent",
+    "type": "text",
+    "default": "aus einer Hand."
+  },
+  {
+    "name": "intro",
+    "label": "Einleitung",
+    "type": "richtext",
+    "default": "<p>Je nach Ausgangslage verbinden wir Executive Search, strukturierte Auswahlverfahren und Leadership Assessments zu einem klaren Entscheidungsprozess.</p>"
+  },
+  {
+    "name": "steps",
+    "label": "Schritte",
+    "type": "group",
+    "occurrence": { "min": 1, "max": 6, "default": 3 },
+    "children": [
+      { "name": "number", "label": "Nummer", "type": "text", "default": "01" },
+      { "name": "title", "label": "Titel", "type": "text", "default": "" },
+      { "name": "body", "label": "Beschreibung", "type": "richtext", "default": "" }
+    ],
+    "default": [
+      { "number": "01", "title": "Rolle und Situation verstehen", "body": "<p>Ausgangspunkt ist nicht allein die Vakanz, sondern die Entwicklungsphase des Unternehmens, die Eigentümerstruktur sowie die konkreten Anforderungen an Rolle und Führungspersönlichkeit.</p>" },
+      { "number": "02", "title": "Interne und externe Optionen fundiert bewerten", "body": "<p>Executive Search kann mit strukturierten Interviews und Leadership Assessments verbunden werden. Dadurch lassen sich interne und externe Kandidaten auf einer einheitlichen Grundlage beurteilen.</p>" },
+      { "number": "03", "title": "Führungspersönlichkeiten identifizieren und gewinnen", "body": "<p>b+p identifiziert und adressiert geeignete Kandidatinnen und Kandidaten und begleitet den Auswahlprozess bis zur fundierten Besetzungsentscheidung.</p>" }
+    ]
+  },
+  {
+    "name": "roles_label",
+    "label": "Rollen-Zeile · Label",
+    "type": "text",
+    "default": "Typische Rollen"
+  },
+  {
+    "name": "roles",
+    "label": "Rollen",
+    "type": "group",
+    "occurrence": { "min": 0, "max": 20, "default": 9 },
+    "children": [
+      { "name": "text", "label": "Rolle", "type": "text", "default": "" }
+    ],
+    "default": [
+      { "text": "Geschäftsführung" },
+      { "text": "CFO" },
+      { "text": "COO" },
+      { "text": "Finance" },
+      { "text": "Operations" },
+      { "text": "Vertrieb" },
+      { "text": "HR" },
+      { "text": "IT" },
+      { "text": "Technik" }
+    ]
+  }
+]
