@@ -21,7 +21,6 @@ export default function LPProblem() {
     <section className="section bg-surface-soft">
       <div className="container-bp">
         <div className="max-w-3xl mb-14">
-          <div className="eyebrow mb-5">Ausgangslage</div>
           <h2 className="text-[30px] md:text-[42px] leading-[1.1] text-ink-primary tracking-[-0.012em]">
             Jede Beteiligung ist individuell.{" "}
             <span className="accent-blue">Führungsfragen kehren dennoch wieder.</span>
@@ -29,14 +28,12 @@ export default function LPProblem() {
           <div className="mt-7 space-y-5 text-[16.5px] leading-[1.75]">
             <p>
               Nachfolge, Wachstum, Professionalisierung, Buy-and-Build oder
-              Internationalisierung verändern die Anforderungen an Führung
-              regelmäßig.
+              Internationalisierung stellen Portfoliounternehmen immer wieder
+              vor neue Personalentscheidungen.
             </p>
             <p>
-              Geschäftsmodell, Unternehmenskultur, Governance und
-              Entwicklungsphase unterscheiden sich von Beteiligung zu
-              Beteiligung. Entsprechend individuell müssen Führungsrollen
-              definiert, besetzt und beurteilt werden.
+              Gleichzeitig unterscheiden sich Geschäftsmodell, Kultur und
+              Führungssituation jeder Beteiligung.
             </p>
           </div>
         </div>

@@ -1,20 +1,10 @@
 export default function LPDifferenzierung() {
   return (
-    <section className="relative overflow-hidden bg-[#0B1B2E] text-white">
-      <div className="absolute inset-0 opacity-[0.05] pointer-events-none">
-        <div
-          className="absolute inset-0"
-          style={{
-            backgroundImage:
-              "linear-gradient(rgba(255,255,255,1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,1) 1px, transparent 1px)",
-            backgroundSize: "96px 96px",
-          }}
-        />
-      </div>
+    <section className="relative overflow-hidden bg-[#001F3E] text-white">
+      <div className="absolute inset-0 pointer-events-none bg-[radial-gradient(ellipse_at_top_right,rgba(0,100,181,0.28),transparent_60%)]" />
 
       <div className="relative container-bp py-24 md:py-32">
         <div className="max-w-4xl">
-          <div className="eyebrow eyebrow--onblue mb-8">Standpunkt</div>
           <h2 className="text-white text-[30px] md:text-[48px] lg:text-[56px] leading-[1.06] tracking-[-0.02em] font-bold">
             Eine neue Eigentümerstruktur macht aus einem mittelständischen
             Unternehmen{" "}

@@ -9,11 +9,11 @@ const config: Config = {
     extend: {
       colors: {
         brand: {
-          blue: "#0872BF",
-          "blue-dark": "#065C99",
-          "blue-deep": "#054976",
-          yellow: "#FFB400",
-          "yellow-warm": "#F5A623",
+          blue: "#0064B5",
+          "blue-dark": "#004E8C",
+          "blue-deep": "#003A6B",
+          yellow: "#FBB900",
+          "yellow-warm": "#FBB900",
         },
         ink: {
           primary: "#3D4658",

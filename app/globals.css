@@ -3,11 +3,11 @@
 @tailwind utilities;
 
 :root {
-  --brand-blue: #0872bf;
-  --brand-blue-dark: #065c99;
-  --brand-blue-deep: #054976;
-  --brand-yellow: #ffb400;
-  --brand-yellow-warm: #f5a623;
+  --brand-blue: #0064b5;
+  --brand-blue-dark: #004e8c;
+  --brand-blue-deep: #003a6b;
+  --brand-yellow: #fbb900;
+  --brand-yellow-warm: #fbb900;
   --text-primary: #3d4658;
   --text-secondary: #626a78;
   --text-muted: #8a93a3;
@@ -83,19 +83,19 @@
     justify-content: center;
     gap: 10px;
     padding: 16px 30px;
-    background: var(--brand-yellow-warm);
+    background: var(--brand-yellow);
     color: #1a1f2b;
     font-weight: 700;
     font-size: 15px;
     letter-spacing: 0.01em;
     border-radius: 999px;
     transition: background .2s ease, transform .2s ease, box-shadow .2s ease;
-    box-shadow: 0 6px 18px -8px rgba(245, 166, 35, 0.55);
+    box-shadow: 0 6px 18px -8px rgba(251, 185, 0, 0.55);
   }
   .btn-primary:hover {
-    background: #e2951a;
+    background: #e2a800;
     transform: translateY(-1px);
-    box-shadow: 0 10px 22px -8px rgba(245, 166, 35, 0.7);
+    box-shadow: 0 10px 22px -8px rgba(251, 185, 0, 0.7);
   }
 
   .btn-ghost {
@@ -121,16 +121,16 @@
     align-items: center;
     gap: 10px;
     padding: 16px 30px;
-    background: var(--brand-yellow-warm);
+    background: var(--brand-yellow);
     color: #1a1f2b;
     font-weight: 700;
     font-size: 15px;
     border-radius: 999px;
     transition: background .2s ease, color .2s ease;
-    box-shadow: 0 6px 18px -8px rgba(245, 166, 35, 0.55);
+    box-shadow: 0 6px 18px -8px rgba(251, 185, 0, 0.55);
   }
   .btn-onblue:hover {
-    background: #e2951a;
+    background: #e2a800;
     color: #1a1f2b;
   }
 

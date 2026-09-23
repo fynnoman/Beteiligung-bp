@@ -23,12 +23,13 @@ export default function LPVorgehensweise() {
         <div className="max-w-3xl mb-16">
           <div className="eyebrow mb-5">Vorgehensweise</div>
           <h2 className="text-[30px] md:text-[44px] leading-[1.08] text-ink-primary tracking-[-0.012em]">
-            Executive Search und Leadership Assessment{" "}
-            <span className="accent-blue">integriert gedacht.</span>
+            Suche und Auswahl{" "}
+            <span className="accent-blue">aus einer Hand.</span>
           </h2>
           <p className="mt-6 text-[16.5px] leading-[1.75]">
-            b+p verbindet Executive Search, strukturierte Auswahlverfahren und
-            Leadership Assessments zu einem durchgängigen Entscheidungsprozess.
+            Je nach Ausgangslage verbinden wir Executive Search, strukturierte
+            Auswahlverfahren und Leadership Assessments zu einem klaren
+            Entscheidungsprozess.
           </p>
         </div>
 

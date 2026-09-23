@@ -19,7 +19,7 @@ export default function LPHero() {
 
           <div className="mt-10 flex flex-col sm:flex-row items-start sm:items-center gap-4">
             <a href="#kontakt" className="btn-primary">
-              Erstgespräch anfragen
+              Führungsbedarf vertraulich besprechen
               <svg className="arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
                 <path d="M5 12h14M13 5l7 7-7 7" />
               </svg>
@@ -43,16 +43,7 @@ export default function LPHero() {
 
         <div className="lg:col-span-5 order-2">
           <div className="relative aspect-[4/5] rounded-panel overflow-hidden bg-brand-blue-deep card-shadow">
-            <div className="absolute inset-0 bg-[linear-gradient(155deg,#0B1B2E_0%,#054976_60%,#08325C_100%)]" />
-
-            <div
-              className="absolute inset-0 opacity-[0.06]"
-              style={{
-                backgroundImage:
-                  "linear-gradient(rgba(255,255,255,1) 1px, transparent 1px)",
-                backgroundSize: "1px 44px",
-              }}
-            />
+            <div className="absolute inset-0 bg-[linear-gradient(155deg,#001F3E_0%,#003A6B_55%,#004E8C_100%)]" />
 
             <div className="absolute inset-0 p-9 md:p-10 flex flex-col justify-between text-white">
               <div className="flex items-center justify-between">

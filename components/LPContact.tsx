@@ -2,17 +2,8 @@ export default function LPContact() {
   return (
     <section id="kontakt" className="section bg-surface-soft scroll-mt-24">
       <div className="container-bp">
-        <div className="relative rounded-panel overflow-hidden bg-[#0B1B2E] text-white card-shadow">
-          <div className="absolute inset-0 opacity-[0.05] pointer-events-none">
-            <div
-              className="absolute inset-0"
-              style={{
-                backgroundImage:
-                  "linear-gradient(rgba(255,255,255,1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,1) 1px, transparent 1px)",
-                backgroundSize: "96px 96px",
-              }}
-            />
-          </div>
+        <div className="relative rounded-panel overflow-hidden bg-[#001F3E] text-white card-shadow">
+          <div className="absolute inset-0 pointer-events-none bg-[radial-gradient(ellipse_at_top_right,rgba(0,100,181,0.28),transparent_60%)]" />
 
           <div className="relative grid lg:grid-cols-12 gap-10 lg:gap-16 p-8 md:p-12 lg:p-16">
             <div className="lg:col-span-5">
