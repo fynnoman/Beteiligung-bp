@@ -49,11 +49,16 @@
     "name": "form",
     "label": "Kontaktformular",
     "help_text": "HubSpot-Formular auswählen. Wird rechts im Panel gerendert.",
-    "required": true,
+    "required": false,
     "type": "form",
     "default": {
+      "form_id": "494000c6-f3ed-41dc-b818-86984d601001",
       "response_type": "inline",
-      "message": "Vielen Dank. Wir melden uns kurzfristig persönlich zurück."
+      "message": "Vielen Dank. Wir melden uns kurzfristig persönlich zurück.",
+      "redirect_url": "",
+      "redirect_id": null,
+      "gotowebinar_webinar_key": "",
+      "notifyRecipients": ""
     }
   },
   {

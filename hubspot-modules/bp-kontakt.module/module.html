@@ -46,10 +46,12 @@
                 form_key="bp_kontakt_form"
                 form_to_use="{{ module.form.form_id }}"
                 response_response_type="{{ module.form.response_type }}"
-                response_message="{{ module.form.message }}"
-                response_redirect_url="{{ module.form.redirect_url }}"
+                response_message="{{ module.form.message|escape_html }}"
+                response_redirect_url="{{ module.form.redirect_url|escape_html }}"
                 response_redirect_id="{{ module.form.redirect_id }}"
-                no_title=true
+                gotowebinar_webinar_key="{{ module.form.gotowebinar_webinar_key }}"
+                notifyRecipients="{{ module.form.notifyRecipients }}"
+                no_title=True
               %}
             {% else %}
               <div class="bp-kontakt__form-empty">Bitte im Editor rechts unter „Kontaktformular" ein HubSpot-Formular auswählen.</div>

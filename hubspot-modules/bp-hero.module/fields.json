@@ -1,7 +1,7 @@
 [
   {
     "name": "eyebrow",
-    "label": "Eyebrow (Kleintext oben)",
+    "label": "Eyebrow",
     "type": "text",
     "default": "Executive Search & Leadership Advisory für Beteiligungsunternehmen"
   },
@@ -43,22 +43,12 @@
   },
   {
     "name": "trust_items",
-    "label": "Trust-Zeile (Punkte)",
+    "label": "Trust-Zeile",
     "type": "group",
     "occurrence": { "min": 0, "max": 6, "default": 3 },
     "children": [
-      {
-        "name": "text",
-        "label": "Text",
-        "type": "text",
-        "default": "Executive Search"
-      },
-      {
-        "name": "accent",
-        "label": "Blau hervorheben?",
-        "type": "boolean",
-        "default": false
-      }
+      { "name": "text", "label": "Text", "type": "text", "default": "" },
+      { "name": "accent", "label": "Blau hervorheben?", "type": "boolean", "default": false }
     ],
     "default": [
       { "text": "Executive Search", "accent": true },
@@ -71,9 +61,11 @@
     "label": "Bild rechts (optional)",
     "help_text": "Wenn gesetzt, ersetzt das Bild das gestylte Editorial-Panel.",
     "type": "image",
-    "responsive": true,
-    "resizable": true,
-    "default": { "src": "", "alt": "", "width": 800, "height": 1000 }
+    "default": {
+      "src": "",
+      "alt": "",
+      "loading": "lazy"
+    }
   },
   {
     "name": "side_top_label",
